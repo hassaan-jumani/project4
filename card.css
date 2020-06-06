@@ -1,0 +1,104 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@1,300&display=swap');
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+.container{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+
+}
+.card{
+    height: 325px;
+    max-width: 350px;
+    margin: 0 20px;
+    background: white;
+    transition: 0.2s;
+    box-shadow: 2px 2px 5px rgba(0, 0, 0, 2);
+
+
+}
+.card .img{
+    height: 265px;
+    width: 100%;
+
+}
+.card .img img{
+    height: 100%;                                                                                 
+    width: 100%;
+    object-fit: cover;
+
+}
+
+html,body{
+    height: 100%;
+    display: grid;
+    place-items: center;
+    background: #f2f2ff;
+    text-align: center;
+}
+.card .upper_text{
+    padding: 5px;
+}
+.card .upper_text .product_name{
+    font-size: 25px;
+    font-weight: 600;
+    color: #e74c3c;
+    line-height: 20px;
+}
+.card .bottom_text{
+    padding: 0 20px 10px 20px;
+    margin-top: 80px;
+    background: white;
+    opacity: 0;
+    visibility: hidden;
+    transition: 0.1s;
+
+}
+.card .bottom_text .text{
+    text-align: justify;
+}
+.card .bottom_text{
+    margin: 10px 0;
+    text-align: left;
+    
+}
+.card:hover .bottom_text{
+    opacity: 1;
+    visibility: visible;
+    
+}
+
+.card:hover{
+    height: 670px;
+    box-shadow: 5px 5.px 10px rgba(0, 0, 0, 2);
+}  
+.card .bottom_text .btn a{
+    text-decoration: none;
+    background: #e74c3c;
+    padding: 5px 8px;
+    color: #f2f2ff;
+    border-radius: 3px;
+    display: inline-flex;
+    transition: .2s;
+}
+.card .bottom_text .btn a:hover{
+    transform: scale(0.9) ;
+}
+
+@media screen and (max-width:978px) {
+    .container{
+        flex-wrap: wrap;
+        flex-direction: column;
+        padding: 0 40px;
+    }
+    .card{
+        max-width: 300px;
+        margin: 20px 0;   
+
+ }
+}
